@@ -1,9 +1,9 @@
-# trip_planner
+#<div align="center">Trip Planner
 (Developed for MIDS W200 Python project I in summer 2020 by Ratan Deep Singh ratan_singh@berkeley.edu)
 
 I remember the difficulty in planning any trip during the weekends – browsing through multiple websites to get the data for perfect hiking spots, for different events happening around the area and also the best restaurant to provide your favorite cuisine for the dinner. For me personally, this has been a very time consuming process involving multiple hours to browse through various websites and finalizing the trip details. Hence, I came up with an idea to help users bring in all the information at one single place – give the flexibility to users the pick their criteria for various trip activities, dinner and etc. and provide all the data in one single place (GUI or website).
 
-Thus started the adventure of “Trip Planner” GUI which later became tripinfoapp.com. This project pulls in the data from APIs provided by 3 different websites below:
+Thus started the adventure of **Trip Planner** GUI which later became tripinfoapp.com. This project pulls in the data from APIs provided by 3 different websites below:
 
 1) yelp.com -> Used for getting information on restaurants for dinning
 2) hikingproject.com -> Used for getting information of hiking trails in the area

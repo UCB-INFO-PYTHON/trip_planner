@@ -40,3 +40,13 @@ The tripinfoapp.com website has the API key info built in through the environmen
   - Each of these datas could be sorted with respect to review count, rating and etc (by clicking the "Sortby_ReviewCount", "Sortby_Rating" and etc)  
 
 ![](images/gui.png)
+
+### tripinfoapp.com 
+
+This code was further modifed to be deployed on the website: tripinfoapp.com 
+
+Code for the website was deployed using Heroku. All of this code is present under the folder called "tripinfoappWEB". API keys used for the website are loaded in Heroku through the environment variables. Below is the snapshot of this website which is a more clear version of the GUI. 
+
+There is a single **Submit** button in the website for all the user arguments. Results for yelp, hikingproject and eventful are presented in 3 parallel columns together. Each of these columns can be sorted by various entities like rating and etc (as in case of GUI). 
+
+![](images/app.png)

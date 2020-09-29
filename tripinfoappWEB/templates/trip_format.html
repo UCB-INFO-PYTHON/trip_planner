@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title style="text-align:center">Welcome to Trip Planner!</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css">
+</head>
+
+<body>
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Welcome to Trip Planner
+                </h1>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-offset-3 is-6"> 
+                    <form method="POST" action="/">
+                        <div class="field has-addons">
+                            <div class="control is-expanded"; style="text-align:center">
+                                <span style="background-color: #FCF3CF"><strong style="color: #0FA3D7;font-size:22px;"> Location of Trip </strong></span>
+                            </div>
+                            <div class="control is-expanded"; style="text-align:right">
+                                <input class="input" name="loc" type="text" placeholder="REGION CITY COUNTRY" style="text-align:center"
+                                ><br><br>
+                            </div>
+                        </div>
+                        <div class="field has-addons">
+                            <div class="control is-expanded"; style="text-align:center">
+                                <span style="background-color: #FCF3CF"><strong style="color: #0FA3D7;font-size:22px;">Dinner Cuisine </strong></span>
+                            </div>
+                             <div class="control is-expanded"; style="text-align:center">
+                                <input class="input" name="rest_catg" type="text" placeholder="Category" style="text-align:center"
+                                ><br><br>
+                            </div>
+                        </div>
+                        <div class="field has-addons">
+                            <div class="control is-expanded"; style="text-align:center">
+                                <span style="background-color: #FCF3CF"><strong style="color: #0FA3D7;font-size:22px;">Date of the Trip</strong></span>
+                            </div>
+                            <div class="control is-expanded"; style="text-align:center">
+                                <input class="input" name="dat" type="text" placeholder="YYYY/MM/DD" style="text-align:center"
+                                ><br><br>
+                            </div>
+                        </div>
+                        <div class="field has-addons">
+                            <div class="control is-expanded"; style="text-align:center">
+                                <span style="background-color: #FCF3CF"><strong style="color: #0FA3D7;font-size:22px;">Time for Dinner</strong></span>
+                            </div>
+                            <div class="control is-expanded"; style="text-align:center">
+                                <input class="input" name="tm" type="text" placeholder="HH:MM" style="text-align:center"
+                                ><br><br>
+                            </div>
+                        </div>
+                        <div class="field has-addons">
+                            <div class="control is-expanded"; style="text-align:center">
+                                <span style="background-color: #FCF3CF"><strong style="color: #0FA3D7;font-size:22px;">Event Keywords</mark> </strong></span>
+                            </div>
+                            <div class="control is-expanded"; style="text-align:center">
+                                <input class="input" name="kwords" type="text" placeholder="Event Keywords" style="text-align:center"
+                                ><br><br>
+                                <button class="button is-info" style="text-align:center">
+                                    Submit
+                                </button>
+                            </div>
+                            <div class="control">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-offset-0.5 is-4">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-content">
+                                <div class="content">
+                                    <span class="title is-2">Restaurants Info</span>
+                                        <br>
+                                        <form method="POST" action="/yelpsortbyrating">
+                                            <button class="button is-text">
+                                                <em>Sortby_Rating</em>
+                                            </button>
+                                        </form>
+                                        <form method="POST" action="/yelpsortbyreviews" >
+                                            <button class="button is-text">
+                                                <em>Sortby_Reviews</em>
+                                            </button>
+                                        </form>
+                                        <form method="POST" action="/yelpsortbydistance" >
+                                            <button class="button is-text">
+                                                <em>Sortby_Distance</em>
+                                            </button>
+                                        </form>
+                                    <br>
+                                    {% for rest in rests %}
+                                    <p style="text-align:left"> 
+                                        <span class="title is-5">{{ rest.name }}</span>
+                                        <br>
+                                        <span class="subtitle">{{ rest.city }}</span>
+                                        <br> <em>Zip Code:</em> {{ rest.zip }}
+                                        <br> <em>Distance:</em> {{ rest.distance }}
+                                        <br> <em>Rating:</em> {{ rest.rating }}
+                                        <br> <em>Review Count:</em> {{ rest.review_count }}
+                                    </p>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                 <div class="column is-offset-0.5 is-4">
+                    <div class="box">
+                         <article class="media">
+                            <div class="media-content">
+                                <div class="content">
+                                    <span class="title is-2">Hiking Locations</span>
+                                        <br>
+                                        <form method="POST" action="/hikesortbystarvotes">
+                                            <button class="button is-text">
+                                                <em>Sortby_StarVotes</em>
+                                            </button>
+                                        </form>
+                                        <form method="POST" action="/hikesortbystars" >
+                                            <button class="button is-text">
+                                                <em>Sortby_Stars</em>
+                                            </button>
+                                        </form>
+                                        <form method="POST" action="/hikesortbylength" >
+                                            <button class="button is-text">
+                                                <em>Sortby_Length</em>
+                                            </button>
+                                        </form>
+                                    <br>
+                                    {% for hk in hikes %}
+                                    <p> 
+                                        <span class="title is-5">{{ hk.name }}</span>
+                                        <br>
+                                        <span class="subtitle">{{ hk.location }}</span>
+                                        <br> <em>Difficulty:</em> {{ hk.difficulty }}
+                                        <br> <em>Length:</em> {{ hk.length}}
+                                        <br> <em>Stars:</em> {{ hk.stars }}
+                                        <br> <em>StarVotes:</em> {{ hk.starVotes }}
+                                    </p>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                 <div class="column is-offset-0.5 is-4">
+                    <div class="box">
+                         <article class="media">
+                            <div class="media-content">
+                                <div class="content">
+                                    <span class="title is-2">Events Info</span>
+                                    <br>
+                                        <form method="POST" action="/eventfulsortbycity">
+                                            <button class="button is-text">
+                                                <em>Sortby_City</em>
+                                            </button>
+                                        </form>
+                                        <form method="POST" action="/eventfulsortbycomments" >
+                                            <button class="button is-text">
+                                                <em>Sortby_Comments</em>
+                                            </button>
+                                        </form>
+                                        <form method="POST" action="/eventfulsortbystarttime" >
+                                            <button class="button is-text">
+                                                <em>Sortby_StartTmie</em>
+                                            </button>
+                                        </form><br>
+                                    {% for ev in events %}
+                                    <p> 
+                                        <span class="title is-5">{{ ev.title }}</span>
+                                        <span class="subtitle is-3">{{ ev.address }}</span>
+                                        <br> <em>Venue:</em> {{ ev.venue_name }}
+                                        <br> <em>City:</em> {{ ev.city_name }}
+                                        <br> <em>Start:</em> {{ ev.start_time }}
+                                        <br> <em>Stop:</em> {{ ev.stop_time }}
+                                    </p>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    </footer>
+</body>
+
+</html>

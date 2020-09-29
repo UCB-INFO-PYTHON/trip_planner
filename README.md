@@ -49,4 +49,4 @@ Code for the website was deployed using Heroku. All of this code is present unde
 
 There is a single **Submit** button in the website for all the user arguments. Results for yelp, hikingproject and eventful are presented in 3 parallel columns together. Each of these columns can be sorted by various entities like rating and etc (as in case of GUI). 
 
-![](images/app.png)
+![](images/app_web.png)

@@ -11,12 +11,12 @@ Thus started the adventure of “Trip Planner” GUI which later became tripinfo
 
 The tripinfoapp.com website has the API key info built in through the environment but for running the GUI, the user must have API keys from all the 3 websites above. Below are some useful tips on getting API keys from these websites: 
 
-  - **Yelp API key:** Below video provides a hands-on tutorial on how to request API key for Yelp
+  - **Yelp API key:** Below video provides a hands-on tutorial on how to request API key for Yelp\
      -> https://www.youtube.com/watch?v=GFhGN36Wf7Q
   - **Hikingproject API key:** Signup on below website using your email ID:\
      -> https://www.hikingproject.com/data
-  - **Eventful API:** https://api.eventful.com/keys\
-     -> Register your account at : http://www.eventful.com/join?goto=http%3A%2F%2Fapi.eventful.com%2Fkeys\
+  - **Eventful API:** https://api.eventful.com/keys  
+     -> Register your account at : http://www.eventful.com/join?goto=http%3A%2F%2Fapi.eventful.com%2Fkeys  
      -> After above, request an API key here in link below: http://api.eventful.com/keys/new (Fill in some dummy information here to get the API key)
 
 
